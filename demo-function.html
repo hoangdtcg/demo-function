@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Hàm là nhóm các câu lệnh để thực hiện 1 tính năng cụ thể nào đó
+    // Cú pháp:
+    /*
+    * function ten-ham(parameter(tham số - không bắt buộc)){
+    *   let a = 0;
+    *   //statements
+    * }
+    *
+    * */
+    //Tham số(Parameter) - Đối số(Argument)
+    //Tham số là biến được định nghĩa trong phần khai báo hàm để nhận các giá trị truyền vào hàm - biến của hàm.
+
+    //Ví dụ: function getSum(a=7, b = 2){ //a,b được gọi làm tham số - parameter - param.
+    //      return a+b;
+    // }
+
+    //Tham số mặc định: getSum(8) // 10
+
+    //Đối số là các giá trị cụ thể được truyền vào tham số thông qua lời gọi hàm.
+    // getSum(3,4) // 3,4 gọi là đối số - argument - arg;
+
+    //Khai báo hàm thì khai báo tham số - gọi hàm thì truyền vào đối số.
+
+    function getSum(a=7,b=2) {
+        return a+b;
+    }
+
+    // document.write(getSum(undefined,3)); //null = 0; undefined = default value;
+
+    //Tham số:
+    //Biến là gì? - Biến là đại diện cho 1 ô nhớ chứa giá trị
+    //- Tham trị: - Lấy giá trị - Khi giá trị có kiểu dữ liệu nguyên thủy: string, number, boolean, null, undefined
+    //- Tham chiếu - Chiếu đến ô nhớ (reference - tham chiếu) - Khi là kiểu dữ liệu đặc biệt: array(mảng), object(đối tượng)...
+
+    //Ví dụ:
+    let num = 3;
+    let arr = [10];
+    function changeValue(a) {
+        a = 5;
+    }
+    changeValue(num);
+    document.write(num);
+
+    document.write("<br/>");
+    function changeValue2(b) {
+        b[0] = 1;
+    }
+    changeValue2(arr);
+    document.write(arr);
+
+    //Có mấy loại hàm? - 2 loại
+    //Hàm có return - Hàm số học - trả về 1 giá trị khi thực thi hàm - cần khai báo biến để hứng giá trị trả về của hàm. vd: let sum = getSum(3,4); <=> let sum = 7;
+    //Hàm không có return - Hàm thủ tục - không trả về giá trị gì (void)
+    //Ngoại lệ: return;(thoát khỏi hàm) <=> break;(thoát khỏi vòng lặp).
+
+    
+</script>
+
+</body>
+</html>
